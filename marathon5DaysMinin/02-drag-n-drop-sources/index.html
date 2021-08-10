@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drag and Drop | Проект 2</title>
+  </head>
+  <body>
+    <div>
+      <div class="row">
+          <div class="col-header start">Начать <img src="https://img.icons8.com/dusk/24/000000/cursor.png"/></div>
+          <div class="col-header progress">В процессе <img src="https://img.icons8.com/office/24/000000/services--v1.png"/></div>
+          <div class="col-header done">Готовы <img src="https://img.icons8.com/officexs/24/000000/checked-2--v1.png"/></div>
+      </div>
+
+      <div class="row">
+        <div class="placeholder">
+          <div id="click" class="item" draggable="true">Перетащи меня</div>
+        </div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+      <div class="row">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+      <div class="row">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>  
+    </div>
+
+    <audio id="soundClick">
+      <source src="https://noisefx.ru/noise_base/17/08368.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer> <div class="footer"><a href="https://icons8.com/icon/43151/курсор"> Icons8</a></div></footer>
+    <script src="app.js"></script>
+  </body>
+</html>

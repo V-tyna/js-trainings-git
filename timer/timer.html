@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple setInterval clock</title>
+    <style>
+        .container {
+            display: flex;
+            flex-flow: wrap column;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid goldenrod;
+            border-radius: 10px;
+            background-color: rgba(255, 228, 196, 0.62);
+        }
+
+        .timer {
+            margin: 0;
+            color: darkgoldenrod;
+        }
+
+        .clock {
+            color: darkgoldenrod;
+            font-size: 1.5em;
+            padding-bottom: 5px;
+        }
+
+        .buttons {
+            min-width: 70%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .start, .stop, .reset {
+            color: #4f3905;
+            border: 1px solid darkgoldenrod;
+            border-radius: 3px;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px rgba(184, 134, 11, 0.64);
+        }
+
+        .start:hover, .stop:hover, .reset:hover {
+            background-color: rgba(184, 134, 11, 0.76);
+        }
+
+        .start:disabled {
+            background-color: rgba(255, 228, 196, 0.62);
+            color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="timer">Timer</h1>
+    <p class="clock"></p>
+    <div class="buttons">
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+        <button class="reset">Reset</button>
+    </div>
+
+</div>
+
+<script src="timer.js"></script>
+</body>
+</html>

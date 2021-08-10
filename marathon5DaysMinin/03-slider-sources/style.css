@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sidebar > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.sidebar h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.main-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.main-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+
+button:hover {
+  color: #222;
+}
+
+button:focus {
+  outline: none;
+}
+
+.container .controls button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.container .controls .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.container .controls .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+h1, p {
+  color: black;
+  text-align: center;
+}
+
+.dot-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.outer-dot {
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid transparent;
+  position: absolute;
+  background: rgba(0,0,0,0.2);
+  border-radius: 64px;
+  line-height: .5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgba(255,255,255,0.5);
+  box-sizing: inherit;
+  top: 38%;
+  left: 32%;
+  }
+  
+    .inner-dot {
+    position: relative;
+    content: "";
+    transition: transform 250ms ease-in-out;
+    display: block;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.55);
+    width: .75rem;
+    height: .75rem;
+    border-radius: 64px;
+}
+
+.inner-dot:hover {
+    z-index: 10;
+    transform: scale(0.675);
+}
+
+.tooltip {
+  position: fixed;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  font: italic 14px/1.3 sans-serif;
+  color: rgb(255, 255, 255);
+  background: rgba(80, 80, 80, 0.5);
+  box-shadow: 3px -3px 3px rgba(0, 0, 0, .3);
+}
